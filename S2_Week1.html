@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <title>Rekenmachine</title>
+
+    </head>
+    <body>
+        <h1>Opdracht 1</h1>
+       <p id="opdracht1_1"></p>
+       <p id="opdracht1_2"></p>
+       <p id="opdracht1_3"></p>
+       <p id="opdracht1_4"></p>
+        
+        <h1>Opdracht 1 bis</h1>
+        <p id="opdracht1_bis"></p>
+        <p id="opdracht1_bis_2"></p>
+        <p id="opdracht1_bis_3"></p>
+        <h1>Opdracht 1 tris</h1>
+        <input type="text" id="Opdracht1_tris_1_Getal1" value=""> +
+        <input type="text" id="Opdracht1_tris_1_Getal2" value=""><br>
+        <button onclick="Opdracht1_tris_1()">Klik</button>
+        <p id="opdracht1_tris_1_uitkomst"></p>
+        
+        <input type="text" id="Opdracht1_tris_2_Getal1" value="">*
+        <input type="text" id="Opdracht1_tris_2_Getal2" value=""><br>
+        <button onclick="Opdracht1_tris_2()">Klik</button>
+        <p id="opdracht1_tris_1_uitkomst_2"></p>
+        
+        <input type="text" id="Opdracht1_tris_3_Getal1" value="">/
+        <input type="text" id="Opdracht1_tris_3_Getal2" value=""><br>
+        <button onclick="Opdracht1_tris_3()">Klik</button>
+        <p id="opdracht1_tris_1_uitkomst_3"></p>
+        
+        <h3>Toon geschiedenis</h3>
+        <button onclick="Opdracht1_tris_4()">Klik</button>
+        <p id="opdracht1_tris_1_geschiedenis"></p>
+<script>
+    var x=1;
+    var y=2;
+    var geschiedenis = [];
+    //opdracht 1
+    function Opdracht1_1() 
+    {
+    return x + y;
+    }
+document.getElementById("opdracht1_1").innerHTML = Opdracht1_1();
+    
+    function Opdracht1_2() 
+    {
+    return x - y;
+    }
+document.getElementById("opdracht1_2").innerHTML = Opdracht1_2();
+    
+    function Opdracht1_3() 
+    {
+    return x * y;
+    }
+document.getElementById("opdracht1_3").innerHTML = Opdracht1_3();
+    
+    function Opdracht1_4() 
+    {
+    return x / y;
+    }
+document.getElementById("opdracht1_4").innerHTML = Opdracht1_4();
+    //Opdracht 1 bis
+    function Opdracht1_bis() 
+    {
+    return x + (x / y);
+    }
+document.getElementById("opdracht1_bis").innerHTML = Opdracht1_bis();
+    
+    function Opdracht1_bis_2() 
+    {
+    return x + (x - y);
+    }
+document.getElementById("opdracht1_bis_2").innerHTML = Opdracht1_bis_2();
+    
+    function Opdracht1_bis_3() 
+    {
+    return x + (x * y);
+    }
+document.getElementById("opdracht1_bis_3").innerHTML = Opdracht1_bis_3();
+    //Opdracht 1 tris
+    
+    function Opdracht1_tris_1() 
+    {
+    var getal1 = parseInt(document.getElementById("Opdracht1_tris_1_Getal1").value);
+    var getal2 = parseInt(document.getElementById("Opdracht1_tris_1_Getal1").value);
+    var uitkomst = getal1 + getal2;
+    geschiedenis.push(uitkomst);
+    document.getElementById("opdracht1_tris_1_uitkomst").innerHTML = uitkomst;
+    }
+    
+    function Opdracht1_tris_2() 
+    {
+    var getal1 = parseInt(document.getElementById("Opdracht1_tris_2_Getal1").value);
+    var getal2 = parseInt(document.getElementById("Opdracht1_tris_2_Getal2").value);
+    var uitkomst = getal1 * getal2;
+    geschiedenis.push(uitkomst);
+    document.getElementById("opdracht1_tris_1_uitkomst_2").innerHTML = uitkomst;
+    }
+    
+    function Opdracht1_tris_3() 
+    {
+    var getal1 = parseInt(document.getElementById("Opdracht1_tris_3_Getal1").value);
+    var getal2 = parseInt(document.getElementById("Opdracht1_tris_3_Getal2").value);
+    var uitkomst = getal1 / getal2;
+    geschiedenis.push(uitkomst);
+    document.getElementById("opdracht1_tris_1_uitkomst_3").innerHTML = uitkomst;
+    }
+    
+    function Opdracht1_tris_4()
+    {
+    geschiedenis.toString();
+    document.getElementById("opdracht1_tris_1_geschiedenis").innerHTML = geschiedenis;
+    }
+    
+    
+</script>
+    </body>
+</html>
+
