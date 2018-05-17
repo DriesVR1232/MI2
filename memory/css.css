@@ -1,0 +1,270 @@
+#speelVlak {
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    height: 700px;
+    background-image: url(afbeeldingen/achtergrond.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+}
+
+#kaartvlak {
+    margin-left: 20%;
+}
+
+#kaartvlak .kaart {
+    background-color: red;
+    width: 80px;
+    height: 80px;
+}
+
+img {
+    width: 90px;
+    height: 100px;
+    background-color: red;
+    border-radius: 15px;
+    border: 3px solid white;
+    margin-left: 2px;
+    box-shadow: 5px 5px 5px white;
+}
+
+#scorePlaats {
+    margin: 0;
+    border-bottom-right-radius: 15px;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    width: 40px;
+    height: 30px;
+    font-size: 25px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: lightgray;
+}
+
+@media only screen and (max-width: 320px) {
+    #kaartvlak {
+        margin-left: 10%;
+    }
+    img {
+        width: 65px;
+        height: 63px;
+        background-color: red;
+        border-radius: 15px;
+        border: 3px solid white;
+        margin-left: 2.5px;
+        box-shadow: 2px 2px 2px white;
+    }
+    /* bepaalde afbeeldingen niet tonen wanneer mobile*/
+    [id="15"] {
+        display: none;
+    }
+    [id="16"] {
+        display: none;
+    }
+    [id="17"] {
+        display: none;
+    }
+    [id="18"] {
+        display: none;
+    }
+    [id="19"] {
+        display: none;
+    }
+    [id="20"] {
+        display: none;
+    }
+    [id="21"] {
+        display: none;
+    }
+    [id="22"] {
+        display: none;
+    }
+    [id="23"] {
+        display: none;
+    }
+    [id="24"] {
+        display: none;
+    }
+    [id="25"] {
+        display: none;
+    }
+    [id="26"] {
+        display: none;
+    }
+    [id="27"] {
+        display: none;
+    }
+    [id="28"] {
+        display: none;
+    }
+    [id="29"] {
+        display: none;
+    }
+    [id="30"] {
+        display: none;
+    }
+    [id="31"] {
+        display: none;
+    }
+    [id="32"] {
+        display: none;
+    }
+    [id="33"] {
+        display: none;
+    }
+    [id="34"] {
+        display: none;
+    }
+    [id="35"] {
+        display: none;
+    }
+    [id="36"] {
+        display: none;
+    }
+    [id="37"] {
+        display: none;
+    }
+    [id="38"] {
+        display: none;
+    }
+    /*///////////////////////////////////////////////////*/
+    /*linebreaks verwijderen wanneer mobile*/
+    #br1 {
+        display: none;
+    }
+    #br2 {
+        display: none;
+    }
+    #br3 {
+        display: none;
+    }
+    #br4 {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    #kaartvlak {
+        margin-left: 10%;;
+    }
+    img {
+        width: 65px;
+        height: 63px;
+        background-color: red;
+        border-radius: 15px;
+        border: 3px solid white;
+        margin-left: 2.5px;
+        box-shadow: 2px 2px 2px white;
+    }
+    /* bepaalde afbeeldingen niet tonen wanneer mobile*/
+    [id="17"] {
+        display: none;
+    }
+    [id="18"] {
+        display: none;
+    }
+    [id="19"] {
+        display: none;
+    }
+    [id="20"] {
+        display: none;
+    }
+    [id="21"] {
+        display: none;
+    }
+    [id="22"] {
+        display: none;
+    }
+    [id="23"] {
+        display: none;
+    }
+    [id="24"] {
+        display: none;
+    }
+    [id="25"] {
+        display: none;
+    }
+    [id="26"] {
+        display: none;
+    }
+    [id="27"] {
+        display: none;
+    }
+    [id="28"] {
+        display: none;
+    }
+    [id="29"] {
+        display: none;
+    }
+    [id="30"] {
+        display: none;
+    }
+    [id="31"] {
+        display: none;
+    }
+    [id="32"] {
+        display: none;
+    }
+    [id="33"] {
+        display: none;
+    }
+    [id="34"] {
+        display: none;
+    }
+    [id="35"] {
+        display: none;
+    }
+    [id="36"] {
+        display: none;
+    }
+    [id="37"] {
+        display: none;
+    }
+    [id="38"] {
+        display: none;
+    }
+    /*linebreaks verwijderen wanneer mobile*/
+    #br1 {
+        display: none;
+    }
+    #br2 {
+        display: none;
+    }
+    #br3 {
+        display: none;
+    }
+    #br4 {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #kaartvlak {
+        margin-left: 10%;;
+    }
+    img {
+        width: 65px;
+        height: 63px;
+        background-color: red;
+        border-radius: 15px;
+        border: 3px solid white;
+        margin-left: 2.5px;
+        box-shadow: 2px 2px 2px white;
+    }
+    /* bepaalde afbeeldingen niet tonen wanneer mobile*/
+    /*linebreaks verwijderen wanneer mobile*/
+    #br1 {
+        display: none;
+    }
+    #br2 {
+        display: none;
+    }
+    #br3 {
+        display: none;
+    }
+    #br4 {
+        display: none;
+    }
+}
