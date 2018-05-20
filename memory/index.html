@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Dries Van Ransbeeck">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css.css" rel="stylesheet" type="text/css" />
+    <link href="test.js" rel="stylesheet" type="text/javascript" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    
+    <title>Typing game</title>
+</head>
+
+<body>
+    
+    <div id="speelVlak">
+        <div id="scorePlaats">
+            <p id="score"></p>  
+        </div>
+        <div id="kaartvlak">
+            <br>
+            <br>
+            <img id="0" onclick="toon(0)" src="afbeeldingen/vraagteken.jpg" /> 
+            <img id="1" onclick="toon(1)" src="afbeeldingen/vraagteken.jpg" /> 
+            <img id="2" onclick="toon(2)" src="afbeeldingen/vraagteken.jpg" /> 
+            <img id="3" onclick="toon(3)" src="afbeeldingen/vraagteken.jpg" /> 
+            <img id="4" onclick="toon(4)" src="afbeeldingen/vraagteken.jpg" /> 
+            <img id="5" onclick="toon(5)" src="afbeeldingen/vraagteken.jpg" /> 
+            <img id="6" onclick="toon(6)" src="afbeeldingen/vraagteken.jpg" />
+            <img id="7" onclick="toon(7)" src="afbeeldingen/vraagteken.jpg" />
+            <br id="br1">
+            <img id="8" onclick="toon(8)" src="afbeeldingen/vraagteken.jpg" />
+            <img id="9" onclick="toon(9)" src="afbeeldingen/vraagteken.jpg" />
+            <img id="10" onclick="toon(10)" src="afbeeldingen/vraagteken.jpg" />
+            <img id="11" onclick="toon(11)" src="afbeeldingen/vraagteken.jpg" />
+            <img id="12" onclick="toon(12)" src="afbeeldingen/vraagteken.jpg" />
+            <img id="13" onclick="toon(13)" src="afbeeldingen/vraagteken.jpg" />
+            <img id="14" onclick="toon(14)" src="afbeeldingen/vraagteken.jpg" />
+            <img id="15" onclick="toon(15)" src="afbeeldingen/vraagteken.jpg" />
+            <br id="br2">
+            <img id="16" onclick="toon(16)" src="afbeeldingen/vraagteken.jpg" />
+            <img id="17" onclick="toon(17)" src="afbeeldingen/vraagteken.jpg" />
+            <img id="18" onclick="toon(18)" src="afbeeldingen/vraagteken.jpg" />
+            <img id="19" onclick="toon(19)" src="afbeeldingen/vraagteken.jpg" />
+            <img id="20" onclick="toon(20)" src="afbeeldingen/vraagteken.jpg" />
+            <img id="21" onclick="toon(21)" src="afbeeldingen/vraagteken.jpg" />
+            <img id="22" onclick="toon(22)" src="afbeeldingen/vraagteken.jpg" />
+            <img id="23" onclick="toon(23)" src="afbeeldingen/vraagteken.jpg" />
+            <br id="br3">
+            <img id="24" onclick="toon(24)" src="afbeeldingen/vraagteken.jpg" />
+            <img id="25" onclick="toon(25)" src="afbeeldingen/vraagteken.jpg" />
+            <img id="26" onclick="toon(26)" src="afbeeldingen/vraagteken.jpg" />
+            <img id="27" onclick="toon(27)" src="afbeeldingen/vraagteken.jpg" />
+            <img id="28" onclick="toon(28)" src="afbeeldingen/vraagteken.jpg" />
+            <img id="29" onclick="toon(29)" src="afbeeldingen/vraagteken.jpg" />
+            <img id="30" onclick="toon(30)" src="afbeeldingen/vraagteken.jpg" />
+            <img id="31" onclick="toon(31)" src="afbeeldingen/vraagteken.jpg" />
+            <br id="br4">
+            <img id="32" onclick="toon(32)" src="afbeeldingen/vraagteken.jpg" />
+            <img id="33" onclick="toon(33)" src="afbeeldingen/vraagteken.jpg" />
+            <img id="34" onclick="toon(34)" src="afbeeldingen/vraagteken.jpg" />
+            <img id="35" onclick="toon(35)" src="afbeeldingen/vraagteken.jpg" />
+            <img id="36" onclick="toon(36)" src="afbeeldingen/vraagteken.jpg" />
+            <img id="37" onclick="toon(37)" src="afbeeldingen/vraagteken.jpg" />
+            <img id="38" onclick="toon(38)" src="afbeeldingen/vraagteken.jpg" />
+            <img id="39" onclick="toon(39)" src="afbeeldingen/vraagteken.jpg" />
+        </div>
+        <br/> 
+    </div>
+    <script>
+        //alert(gekozenBtn1);
+        var foto = ["afbeeldingen/reus.png", "afbeeldingen/zombie.png", "afbeeldingen/knight.png", "afbeeldingen/sackboy.png", "afbeeldingen/archer.png", "afbeeldingen/groot.png", "afbeeldingen/steenmonster.png", "afbeeldingen/terrorist.png", "afbeeldingen/goblin.png", "afbeeldingen/zombie.png", "afbeeldingen/reus.png", "afbeeldingen/knight.png", "afbeeldingen/sackboy.png", "afbeeldingen/archer.png", "afbeeldingen/groot.png", "afbeeldingen/steenmonster.png", "afbeeldingen/terrorist.png", "afbeeldingen/goblin.png",];
+        
+        
+        var vorigefoto = "";
+        var vorigenummer = 0;
+        var x;
+        var y;
+        var achtergrondkleurfoto = "rgba(" + 255 + "," + 0 + "," + 0 + "," + 0.1 +")";
+        //functie voor de score
+        function scoreFunction() {
+            var score = 0;
+            return score;
+        }
+        var test = scoreFunction(); // de return van scoreFunction nemen en in variabele test steken
+        document.getElementById("score").innerHTML = test; //de score in een HTML element steken
+        function toon(nummer) {
+            var x = nummer;
+            document.getElementById(nummer).src = foto[nummer]; // zet de foto op het scherm
+            document.getElementById(nummer).style.backgroundColor = achtergrondkleurfoto;
+            if (foto[nummer] == vorigefoto && nummer != vorigenummer) // als dezelfde foto en niet 2x op dezelfde tegel geklikt ...
+            {
+                document.getElementById(vorigenummer).src = foto[vorigenummer];
+                test++;
+                document.getElementById("score").innerHTML = test;
+                x = document.getElementById(vorigenummer);
+                y = document.getElementById(nummer);
+                $(x).fadeTo(1200, 0.01);//de foto laten verdwijnen maar niet verwijderen
+                $(y).fadeTo(1200, 0.01);//de foto laten verdwijnen maar niet verwijderen
+                // door de bovenstaande code te doen blijven de fotos op hun plaats staan nadat de fotos " weg faden"
+                
+            } // als beide kaarten gevonden zijn zet ook de vorige foto op het scherm
+            else {
+                setTimeout(function () {
+                    keerterug(nummer)
+                }, 800);
+            }; // zet het vraagteken terug op het scherm
+            vorigefoto = foto[nummer]; // onthoud de gekozen foto
+            vorigenummer = nummer; // onthoud de gekozen tegel}
+        }
+
+        function keerterug(tegel) {
+            document.getElementById(tegel).src = "afbeeldingen/vraagteken.jpg"; // zet het vraagteken terug op het scherm
+            //wanneer de foto terugdraaid wordt de achtergrond terug rood
+            document.getElementById(vorigenummer).style.backgroundColor = "red";
+        }
+    </script>
+</body>
+
+</html>
