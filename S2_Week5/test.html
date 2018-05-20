@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Opdracht 5 week 5</title>
+    <meta name="description" content="" />
+    <meta name="author" content="Dries Van Ransbeeck" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--<link rel="stylesheet" href="css.css">-->
+    <!--<link rel="stylesheet" href="js.js">-->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+</head>
+
+<body>
+    <div class="mypanel"></div>
+        <script>    
+
+
+    <script>
+    $.getJSON('http://time.jsontest.com', function(data) {
+        
+        var text = `titel : ${data.date}`
+                    
+        
+        $(".mypanel").html(text);
+    });
+    </script>
+</body>
+
+</html>
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>JavaScript - read JSON from URL</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+    <div class="mypanel"></div>
+
+    <script>
+    $.getJSON('http://time.jsontest.com', function(data) {
+        
+        var text = `Date: ${data.date}<br>
+                    Time: ${data.time}<br>
+                    Unix time: ${data.milliseconds_since_epoch}`
+                    
+        
+        $(".mypanel").html(text);
+    });
+    </script>
+    
+</body>
+</html>
+-->

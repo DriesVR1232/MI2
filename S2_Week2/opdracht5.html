@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="nl">
+    <head>
+	<meta charset="utf-8" />
+	<title>Opdracht 5 week 2 - dambord</title>
+	<meta name="description" content="" />
+	<meta name="author" content="Dries Van Ransbeeck" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="opdracht5.css">
+</head>
+
+<body>
+	<input type="number" id="invoerGetal" value="10">
+	<button id="knop" onclick="haalGetalOp()">Teken</button>
+	
+
+	<div id="bord"></div>
+	<script type="text/javascript">
+		"use strict";
+		
+		function haalGetalOp () {
+			var waarde = parseInt(document.getElementById("invoerGetal").value);
+			tekenBord(waarde);
+			
+		}
+
+		function tekenBord(aantal) {
+
+			var i, j, k, veld, inhoud = "";
+
+			for (i = 0; i < aantal; i++) {
+				for (j = 0; j < aantal; j++) {
+					k = '';
+
+					if (j == 0) k = 'first ';
+					k += (i % 2 == j % 2) ? 'white' : 'black';
+					inhoud += "<div class='" + k + "'></div>"
+					//veld = document.createElement('div');
+					//veld.className = k;
+					//document.body.appendChild(veld);
+				}
+
+			}
+			document.getElementById("bord").innerHTML = inhoud;
+			document.getElementById("bord").style.width = (aantal * 75) + "px";
+			document.getElementById("bord").style.height = (aantal * 75) + "px";
+
+		}
+		
+		tekenBord(12);
+	</script>
+</body>
+</html>
