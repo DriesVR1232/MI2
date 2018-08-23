@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Memory Spel</title>
+    <meta name="author" content="Dries Van Ransbeeck">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/css.css"> </head>
+
+<body>
+    <div class="container">
+        <section class="score">
+            <ul class="sterren">
+                <li><img class="ster" src="img/star.png" width="23px" height="23px" alt="Ster"></li>
+                <li><img class="ster" src="img/star.png" width="23px" height="23px" alt="Ster"></li>
+                <li><img class="ster" src="img/star.png" width="23px" height="23px" alt="Ster"></li>
+            </ul>
+            <br> <span class="pogingen">0</span> Pogingen
+            <br>
+            <div class="timer">0 minuten 0 seconden </div>
+            <div class="restart" onclick=startGame()> <i></i> </div>
+        </section>
+        <ul class="deck" id="card-deck">
+            <li class="card" type="diamand"> <i><img src="img/diamond.png" width="40px" height="45px" alt="Diamand"></i> </li>
+            <li class="card" type="vliegtuig"> <i><img src="img/paper_plane.png" width="40px" height="40px" alt="Vliegtuig"></i> </li>
+            <li class="card match" type="anker"> <i><img src="img/anchor.png" width="40px" height="40px" alt="Anker"></i> </li>
+            <li class="card" type="pijl"> <i><img src="img/bolt.png" width="40px" height="40px" alt="Pijl"></i> </li>
+            <li class="card" type="kubus"> <i><img src="img/cube.png" width="40px" height="40px" alt="Kubus"></i> </li>
+            <li class="card match" type="anker"> <i><img src="img/anchor.png" width="40px" height="40px" alt="Anker"></i> </li>
+            <li class="card" type="blad"> <i><img src="img/leaf.png" width="40px" height="40px" alt="Blad"></i> </li>
+            <li class="card" type="fiets"> <i><img src="img/bicycle.png" width="40px" height="45px" alt="Fiets"></i> </li>
+            <li class="card" type="diamand"> <i><img src="img/diamond.png" width="40px" height="45px" alt="Diamand"></i> </li>
+            <li class="card" type="bom"> <i><img src="img/bomb.png" width="40px" height="45px" alt="Bom"></i> </li>
+            <li class="card" type="blad"> <i><img src="img/leaf.png" width="40px" height="45px" alt="Blad"></i> </li>
+            <li class="card" type="bom"> <i><img src="img/bomb.png" width="40px" height="45px" alt="Bom"></i> </li>
+            <li class="card open show" type="pijl"> <i><img src="img/bolt.png" width="40px" height="40px" alt="Pijl"></i> </li>
+            <li class="card" type="fiets"> <i><img src="img/bicycle.png" width="40px" height="45px" alt="Fiets"></i> </li>
+            <li class="card" type="vliegtuig"> <i><img src="img/paper_plane.png" width="40px" height="40px" alt="Vliegtuig"></i> </li>
+            <li class="card" type="kubus"> <i><img src="img/cube.png" width="40px" height="40px" alt="Kubus"></i> </li>
+        </ul>
+        <div id="popup1" class="overlay">
+            <div class="popup">
+                <center>
+                    <h2>Gefeliciteerd</h2> </center>
+                <!--X om de popup te sluiten--><a class="close" href=#>×</a>
+                <div class="boodschap"> Gefeliciteerd je hebt gewonnen </div>
+                <div class="content">
+                    <p>Je had <span id=finalMove> </span> pogingen nodig </p>
+                    <p>Je tijd: <span id=totalTime> </span> </p>
+                    <p>Rating: <span id=starRating></span></p>
+                </div>
+                <button id="play-again" onclick="playAgain()">Reset en speel opnieuw</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/javascript.js"></script>
+</body>
+
+</html>
